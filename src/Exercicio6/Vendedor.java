@@ -1,13 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Exercicio6;
 
-/**
- *
- * @author vinic
- */
+import java.util.ArrayList;
+import java.util.List;
+
 public class Vendedor {
+    
+     private String nome;
+    private List<Carro> carrosVendidos = new ArrayList<>();
+
+    public Vendedor(String nome) {
+        this.nome = nome;
+    }
+
+    public void registrarVenda(Carro carro) {
+        carrosVendidos.add(carro);
+    }
+
+    public void listarVendas() {
+        System.out.println("Carros vendidos por " + nome + ":");
+        for (Carro c : carrosVendidos) {
+            System.out.println("- " + c);
+        }
+    }
     
 }
